@@ -1,0 +1,336 @@
+@font-face {
+  font-family: "Satoshi";
+  src: local("Satoshi"), url("./fonts/Satoshi-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nippo";
+  src: local("Nippo"), url("./fonts/Nippo-Bold.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nippo-light";
+  src: local("Nippo"), url("./fonts/Nippo-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+.general-button {
+  background-image: url("../public/assets/button-bg.png");
+  background-repeat: no-repeat;
+  color: #ade1ff;
+  text-shadow: 0px 3px 18px #49bdffb5;
+}
+
+.transparent-button {
+  background-image: url("../public/assets/transparent-btn-bg.png");
+  background-repeat: no-repeat;
+  color: #ade1ff;
+  text-shadow: 0px 3px 18px #49bdffb5;
+}
+
+.general-button:hover {
+  color: #49bdffb5;
+  text-shadow: 3px 6px 36px #49bdffb5;
+}
+
+.transparent-button:hover {
+  color: #49bdffb5;
+  text-shadow: 3px 6px 36px #49bdffb5;
+}
+
+.shiny-link {
+  color: #49bdff;
+  text-shadow: 0px 7px 20px #49bdff;
+}
+
+.bg-container {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  top: -100px;
+}
+
+.home-footer-bg {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.mint-title {
+  text-shadow: 61px 20px 30px rgba(0, 0, 0, 0.25);
+}
+
+.mint-main-art {
+  pointer-events: none;
+  margin-top: 100px;
+}
+
+.mint-card-body {
+  background-image: url("../public/assets/mint-card.png");
+  background-repeat: no-repeat;
+}
+
+.footer-gradient {
+  background: linear-gradient(256.24deg, #182038 39.22%, rgba(2, 74, 48, 0.64) 108.64%);
+}
+
+.modal-bg {
+  background-image: url("../public/assets/mint-footer.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -20px;
+  background-color: #00081b;
+  border: 1px solid #a2ddfe;
+}
+
+.launch-nft {
+  background-image: url("../public/assets/image_path_launch.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  padding-top: 5px;
+  padding-left: 6px;
+  overflow: hidden;
+}
+
+.launch-nft-medium {
+  background-image: url("../public/assets/image_path_launch.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  padding-top: 5px;
+  padding-left: 6px;
+  overflow: hidden;
+}
+
+.launch-nft-medium img {
+  width: 95%;
+  height: 90%;
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 28%);
+  clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 28%);
+  z-index: -1;
+}
+
+.mint-nft {
+  background-image: url("../public/assets/image_path_mint.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-top: 6px;
+  padding-left: 6px;
+  overflow: hidden;
+}
+
+.launch-nft img {
+  width: 95%;
+  height: 90%;
+  -webkit-clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 26%);
+  clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 26%);
+  z-index: -1;
+}
+
+.mint-nft img {
+  /* -webkit-clip-path: polygon(30% 0, 100% 0, 100% 90%, 50% 90%, 0 90%, 0 26%); */
+  clip-path: polygon(29% 0, 96% 0, 96% 50%, 96% 98%, 0 98%, 0 30%);
+  z-index: -1;
+}
+
+.footer-modal {
+  background: linear-gradient(180deg, rgba(3, 87, 135, 0.36) 0%, rgba(0, 38, 60, 0.88) 100%);
+  backdrop-filter: blur(4.5px);
+  border: 1px solid #1ca7f5;
+  border-radius: 0;
+}
+
+.launch-status-card {
+  background-image: url("../public/assets/launch-status-card.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.launch-main-card-left {
+  background-image: url("../public/assets/launch-main-card-left.png");
+}
+
+.launch-main-card-right {
+  background-image: url("../public/assets/launch-main-card-right.png");
+}
+
+.launch-footer-card {
+  background-image: url("../public/assets/launch-footer-card.png");
+}
+
+.underline-effect {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-effect::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-effect:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.underline-effect-shiny {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-effect-shiny::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #49bdff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-effect-shiny:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.underline-effect-button {
+  display: inline-block;
+  position: relative;
+}
+
+.underline-effect-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #5e8cfb;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.underline-effect-button:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.launch-ready {
+  background-image: url("../public/assets/home-footer-card.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.blend-effect-big {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, #000000 100%);
+  background-blend-mode: color-dodge;
+  mix-blend-mode: color-dodge;
+  position: absolute;
+}
+
+.blend-effect-small {
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, #000000 100%);
+  background-blend-mode: color-dodge;
+  mix-blend-mode: color-dodge;
+  position: absolute;
+}
+
+.blend-effect-top {
+  width: 400px;
+  height: 40px;
+  background: radial-gradient(50% 388.6% at 50% 50%, #ffffff 0%, #000000 100%);
+  background-blend-mode: color-dodge;
+  mix-blend-mode: color-dodge;
+  position: absolute;
+}
+
+.blend-effect-tiny {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(50% 50% at 50% 50%, #ffffff 0%, #000000 100%);
+  background-blend-mode: color-dodge;
+  mix-blend-mode: color-dodge;
+  position: absolute;
+}
+
+.blend-effect-tiny-top {
+  width: 200px;
+  height: 20px;
+  background: radial-gradient(50% 388.6% at 50% 50%, #ffffff 0%, #000000 100%);
+  background-blend-mode: color-dodge;
+  mix-blend-mode: color-dodge;
+  position: absolute;
+}
+
+@media screen and (max-width: 1536px) {
+  .mint-card-body {
+    background-size: 100%;
+  }
+  .general-button {
+    background-size: 100%;
+  }
+  .transparent-button {
+    background-size: 100%;
+  }
+  .launch-main-card-left {
+    background-image: url("../public/assets/launch-main-card-left-long.png");
+    background-size: cover;
+  }
+  .launch-main-card-right {
+    background-image: url("../public/assets/launch-main-card-right-long.png");
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bg-container {
+    min-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .mint-card-body {
+    background-image: none;
+  }
+  .mint-footer-bg {
+    min-width: 700px;
+  }
+  .bg-container {
+    min-width: 700px;
+    top: -50px;
+  }
+  .mint-main-art {
+    margin-top: 10px;
+  }
+  .launch-main-card-left {
+    background-image: none;
+  }
+  .launch-main-card-right {
+    background-image: none;
+  }
+}

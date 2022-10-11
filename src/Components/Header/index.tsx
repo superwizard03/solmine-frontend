@@ -26,19 +26,20 @@ export default function Header() {
             <HeaderContent>
                 <img src='assets/logo.png' alt='logo' onClick={() => navigate(``)} className='cursor-pointer' />
                 <HeaderLink className='hidden lg:flex'>
-                    {HeaderTitle.map((header) => {
+                    {HeaderTitle.map((header, i) => {
                         return (
                             header.name !== 'Whitepaper' ? (
                                 <div
                                     className={`${location.pathname === ('/' + header.link) ? 'shiny-link underline-effect-shiny' : 'underline-effect'} cursor-pointer text-base lg:text-lg xl:text-base 2xl:text-xl`}
                                     onClick={() => header.name === 'Whitepaper' ? navigate(`/${header.link}`) : navigate(`/${header.link}`)}
-                                    key={header.link}
+                                    key={i}
                                 >
                                     {header.name}
                                 </div>
                             ) : (
                                 <a className={`${location.pathname === ('/' + header.link) ? 'shiny-link underline-effect-shiny' : 'underline-effect'} cursor-pointer text-base lg:text-lg xl:text-base 2xl:text-xl`}
-                                   href={`${header.link}`}
+                                    href={`${header.link}`}
+                                    key={i}
                                 >
                                     {header.name}
                                 </a>

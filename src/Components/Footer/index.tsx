@@ -34,10 +34,10 @@ export default function Footer() {
                     <div>
                         <div className='text-lg xl:text-xl font-["Satoshi"] text-white font-bold'>FOLLOW US</div>
                         <div className='flex items-center gap-4 mt-3'>
-                            {FooterLink.map((footer) => {
+                            {FooterLink.map((footer, i) => {
                                 return (
-                                    <a href={`${footer.link}`}>
-                                        <img src={`assets/${footer.name}.png`} alt={footer.name} className="cursor-pointer w-[30px] lg:w-[35px] h-[30px] lg:h-[35px]" key={footer.name} />
+                                    <a href={`${footer.link}`} key={i}>
+                                        <img src={`assets/${footer.name}.png`} alt={footer.name} className="cursor-pointer w-[30px] lg:w-[35px] h-[30px] lg:h-[35px]" />
                                     </a>
                                 )
                             })}
